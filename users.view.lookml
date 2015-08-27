@@ -404,6 +404,10 @@
     type: count
     drill_fields: detail*
 
+  - measure: avg_rev_per_customer
+    type: number
+    sql: ${attributed_orders.current_commissionable_amount} / ${count}
+    
 
   # ----- Sets of fields for drilling ------
   sets:
