@@ -33,9 +33,6 @@
         orders.id
 
   fields:
-  - measure: count
-    type: count
-    drill_fields: detail*
     
   - dimension: id
     type: int
@@ -60,6 +57,10 @@
   - dimension: order_id
     type: number
     sql: ${TABLE}.order_id
+    
+  - measure: count
+    type: count
+    drill_fields: detail*
 
   sets:
     detail:
