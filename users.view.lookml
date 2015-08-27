@@ -144,6 +144,9 @@
 
   - dimension: first_name
     sql: ${TABLE}.first_name
+    
+  - dimension: name
+    sql: ${TABLE}.first_name || ' ' || ${TABLE}.last_name
 
   - dimension: gender
     sql: ${TABLE}.gender
