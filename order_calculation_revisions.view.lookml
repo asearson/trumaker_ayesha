@@ -84,5 +84,8 @@
     type: sum
     sql: ${customer_total}
     
-    
-    
+  sets:
+    set_name_1:
+      - d_role.name
+      - current_customer_total
+      - orders.count
