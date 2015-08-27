@@ -406,7 +406,7 @@
 
   - measure: avg_rev_per_customer
     type: number
-    sql: ${attributed_orders.current_commissionable_amount} / ${count}
+    sql: ${attributed_orders.current_commissionable_amount} / nullif (${count},0)
     
 
   # ----- Sets of fields for drilling ------
