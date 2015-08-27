@@ -398,6 +398,7 @@
     sql: ${TABLE}.uuid
 
   - dimension: zip_code
+    type: zipcode
     sql: ${TABLE}.zip_code
 
   - measure: count
