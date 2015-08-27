@@ -59,4 +59,30 @@
   - measure: count
     type: count
     drill_fields: [id, orders.id]
-
+    
+  - measure: current_commissionable_amount
+    type: sum
+    sql: ${commissionable_amount}
+    
+  - measure: current_merchandise_total
+    type: sum
+    sql: ${merchandise_total}
+    
+  - measure: current_deal_discount
+    type: sum
+    sql: ${deal_discount}
+    
+  - measure: current_coupon_discount
+    type: sum
+    sql: ${coupon_discount}
+    
+  - measure: current_taxable_total
+    type: sum
+    sql: ${taxable_total}
+    
+  - measure: current_customer_total
+    type: sum
+    sql: ${customer_total}
+    
+    
+    

@@ -25,12 +25,7 @@
         orders.completed_at <= attributions.expires_at)
       and
         orders.completed_at >= attributions.active_at
-      group by 
-        attributions.agent_id,
-        (users.first_name || ' ' || users.last_name),
-        attributions.customer_id,
-        attributions.sales_team_role_id,
-        orders.id
+      group by 1,2,3,4,5
 
   fields:
     
@@ -38,6 +33,7 @@
     type: int
     sql: ${TABLE}.u_id
     primary_key: true
+    hidden: true
 
   - dimension: agent_id
     type: number
@@ -57,6 +53,7 @@
   - dimension: order_id
     type: number
     sql: ${TABLE}.order_id
+    hidden: true
     
   - measure: count
     type: count
@@ -68,4 +65,3 @@
       - name
       - customer_id
       - sales_team_role_id
-      - order_id
